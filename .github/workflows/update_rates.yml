@@ -8,6 +8,7 @@ on:
 jobs:
   fetch-rates:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     permissions:
       contents: write
@@ -31,6 +32,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin master
           git add data/output.json data/rates_history.csv data/binance_samples.csv
           git diff --cached --quiet || git commit -m "chore: actualizar tasas $(date -u '+%Y-%m-%d %H:%M') UTC"
           git push
