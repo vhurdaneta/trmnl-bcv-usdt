@@ -32,7 +32,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin master
           git add data/output.json data/rates_history.csv data/binance_samples.csv
+          git stash
+          git pull --rebase origin master
+          git stash pop
           git diff --cached --quiet || git commit -m "chore: actualizar tasas $(date -u '+%Y-%m-%d %H:%M') UTC"
           git push
