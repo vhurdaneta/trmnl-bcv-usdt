@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T14:51:06-04:00",
+  "updated_at": "2026-08-08T15:18:07-04:00",
   "bcv": {
     "usd_ves": 756.7083,
     "eur_ves": 871.89443742,
@@ -8,36 +8,36 @@
   "binance_prices": {
     "buy_now": {
       "count": 100,
-      "median": 863.2495,
-      "average": 863.20585,
+      "median": 863.0,
+      "average": 862.94199,
       "min": 861.0,
-      "max": 863.88
+      "max": 863.449
     },
     "sell_now": {
       "count": 100,
-      "median": 860.73,
-      "average": 861.05076,
-      "min": 859.05,
+      "median": 860.585,
+      "average": 861.10473,
+      "min": 859.39,
       "max": 866.0
     },
     "day_avg": {
-      "count": 25,
-      "buy_avg": 863.72526,
-      "sell_avg": 858.1251,
+      "count": 26,
+      "buy_avg": 863.6973653846154,
+      "sell_avg": 858.2197115384615,
       "buy_min": 861.74,
       "buy_max": 865.9,
       "sell_min": 855.0,
       "sell_max": 860.73,
       "first_sample_at": "2026-08-08T00:52:18-04:00",
-      "last_sample_at": "2026-08-08T14:51:08-04:00"
+      "last_sample_at": "2026-08-08T15:18:09-04:00"
     }
   },
   "top_ads": {
     "buy": [
       {
         "price": 861.0,
-        "min": 300.0,
-        "max": 125135.0
+        "min": 80000.0,
+        "max": 86400.0
       },
       {
         "price": 861.5,
@@ -363,11 +363,11 @@
       "date": "2026-08-08",
       "bcv_usd_ves": "756.7083",
       "bcv_eur_ves": "871.89443742",
-      "usdt_buy_avg": "863.72526",
-      "usdt_sell_avg": "858.1251",
-      "samples_count": "25",
+      "usdt_buy_avg": "863.6973653846154",
+      "usdt_sell_avg": "858.2197115384615",
+      "samples_count": "26",
       "first_sample_at": "2026-08-08T00:52:18-04:00",
-      "last_sample_at": "2026-08-08T14:51:08-04:00"
+      "last_sample_at": "2026-08-08T15:18:09-04:00"
     }
   ],
   "change": {
@@ -375,7 +375,7 @@
       "pct": 0.10691889047243891
     },
     "usdt_buy_avg": {
-      "pct": 0.32560689739931714
+      "pct": 0.32236681128948924
     }
   },
   "chart": {
@@ -515,7 +515,7 @@
   "warning": null,
   "error": null,
   "brecha": {
-    "now_pct": 14.079560115833276,
-    "day_avg_pct": 14.1424324273964
+    "now_pct": 14.04658836172406,
+    "day_avg_pct": 14.138746117178231
   }
 }
