@@ -23,8 +23,8 @@ SAMPLE_INTERVAL_SECONDS = 300  # 5 minutos
 
 # Ventana horaria para consultar el BCV (hora Venezuela)
 # A las 6-7AM el BCV ya tiene publicada la tasa correcta del día
-BCV_FETCH_HOUR_START = 3
-BCV_FETCH_HOUR_END   = 8
+BCV_FETCH_HOUR_START = 0
+BCV_FETCH_HOUR_END   = 14
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -94,7 +94,7 @@ def get_last_bcv_rate() -> dict | None:
         return None
 
 
-def should_fetch_bcv(now: dt.datetime) -> bool:
+#def should_fetch_bcv(now: dt.datetime) -> bool:
     """
     Retorna True solo si estamos en la ventana horaria válida para
     consultar el BCV (6AM - 7PM VET en días hábiles L-V).
