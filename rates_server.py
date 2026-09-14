@@ -44,8 +44,28 @@ def now_vet() -> dt.datetime:
 
 
 def _to_float_ves(s: str) -> float:
-    s = s.strip().replace(".", "").replace(",", ".")
+    import re
+    # Eliminar letras, espacios y caracteres especiales (USD, Bs, etc.)
+    s = re.sub(r'[^\d.,-]', '', s).strip()
+    # Si tiene coma pero no punto → la coma es el decimal (500,4606)
+    if ',' in s and '.' not in s:
+        s = s.replace(',', '.')
+    # Si tiene punto pero no coma → verificar si es decimal o miles
+    elif '.' in s and ',' not in s:
+        parts = s.split('.')
+        # Si hay más de un punto, son separadores de miles → eliminarlos excepto el último
+        if len(parts) > 2:
+            s = ''.join(parts[:-1]) + '.' + parts[-1]
+        # Si solo hay un punto y más de 4 decimales → es decimal normal, dejarlo
+    # Si tiene ambos → el que está de último es el decimal
+    elif ',' in s and '.' in s:
+        if s.rfind(',') > s.rfind('.'):
+            s = s.replace('.', '').replace(',', '.')
+        else:
+            s = s.replace(',', '')
     return float(s)
+
+ 
 
 
 def normalize_date_str(s: str) -> str:
