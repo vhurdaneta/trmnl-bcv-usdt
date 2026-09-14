@@ -44,8 +44,28 @@ def now_vet() -> dt.datetime:
 
 
 def _to_float_ves(s: str) -> float:
-    s = s.strip().replace(".", "").replace(",", ".")
+    import re
+    # Eliminar letras, espacios y caracteres especiales (USD, Bs, etc.)
+    s = re.sub(r'[^\d.,-]', '', s).strip()
+    # Si tiene coma pero no punto → la coma es el decimal (500,4606)
+    if ',' in s and '.' not in s:
+        s = s.replace(',', '.')
+    # Si tiene punto pero no coma → verificar si es decimal o miles
+    elif '.' in s and ',' not in s:
+        parts = s.split('.')
+        # Si hay más de un punto, son separadores de miles → eliminarlos excepto el último
+        if len(parts) > 2:
+            s = ''.join(parts[:-1]) + '.' + parts[-1]
+        # Si solo hay un punto y más de 4 decimales → es decimal normal, dejarlo
+    # Si tiene ambos → el que está de último es el decimal
+    elif ',' in s and '.' in s:
+        if s.rfind(',') > s.rfind('.'):
+            s = s.replace('.', '').replace(',', '.')
+        else:
+            s = s.replace(',', '')
     return float(s)
+
+ 
 
 
 def normalize_date_str(s: str) -> str:
@@ -94,14 +114,13 @@ def get_last_bcv_rate() -> dict | None:
         return None
 
 
-#def should_fetch_bcv(now: dt.datetime) -> bool:
+def should_fetch_bcv(now: dt.datetime) -> bool:
     """
     Retorna True solo si estamos en la ventana horaria válida para
-    consultar el BCV (6AM - 7PM VET en días hábiles L-V).
-    Fuera de esa ventana usamos la última tasa conocida del CSV.
+    consultar el BCV (12AM - 2PM VET, todos los días).
+    Corta antes de las 5-6PM, cuando el BCV publica la tasa del
+    próximo día hábil. Fuera de esa ventana usamos el último valor del CSV.
     """
-    if now.weekday() >= 5:  # fin de semana
-        return False
     return BCV_FETCH_HOUR_START <= now.hour < BCV_FETCH_HOUR_END
 
 
