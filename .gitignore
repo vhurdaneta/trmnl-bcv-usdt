@@ -1,1 +1,5 @@
 # Datos locales - no subir a GitHub
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
