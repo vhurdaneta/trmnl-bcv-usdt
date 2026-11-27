@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T00:50:02-04:00",
+  "updated_at": "2026-11-27T00:55:02-04:00",
   "bcv": {
     "usd_ves": 926.3592,
     "eur_ves": 1016.86449384,
@@ -8,28 +8,28 @@
   "binance_prices": {
     "buy_now": {
       "count": 100,
-      "median": 1093.8984999999998,
-      "average": 1093.66235,
+      "median": 1094.0,
+      "average": 1093.72041,
       "min": 1090.0,
       "max": 1095.0
     },
     "sell_now": {
       "count": 100,
-      "median": 1084.05,
-      "average": 1084.33166,
-      "min": 1081.1,
+      "median": 1084.1,
+      "average": 1084.31519,
+      "min": 1081.005,
       "max": 1093.5
     },
     "day_avg": {
-      "count": 10,
-      "buy_avg": 1093.75425,
-      "sell_avg": 1083.7942,
+      "count": 11,
+      "buy_avg": 1093.7765909090908,
+      "sell_avg": 1083.822,
       "buy_min": 1093.262,
       "buy_max": 1094.0,
       "sell_min": 1083.05,
       "sell_max": 1084.155,
       "first_sample_at": "2026-11-27T00:00:06-04:00",
-      "last_sample_at": "2026-11-27T00:50:05-04:00"
+      "last_sample_at": "2026-11-27T00:55:05-04:00"
     }
   },
   "top_ads": {
@@ -363,11 +363,11 @@
       "date": "2026-11-27",
       "bcv_usd_ves": "926.3592",
       "bcv_eur_ves": "1016.86449384",
-      "usdt_buy_avg": "1093.75425",
-      "usdt_sell_avg": "1083.7942",
-      "samples_count": "10",
+      "usdt_buy_avg": "1093.7765909090908",
+      "usdt_sell_avg": "1083.822",
+      "samples_count": "11",
       "first_sample_at": "2026-11-27T00:00:06-04:00",
-      "last_sample_at": "2026-11-27T00:50:05-04:00"
+      "last_sample_at": "2026-11-27T00:55:05-04:00"
     }
   ],
   "change": {
@@ -375,7 +375,7 @@
       "pct": 0.216994928563039
     },
     "usdt_buy_avg": {
-      "pct": -0.045760547119526596
+      "pct": -0.043718892353966574
     }
   },
   "chart": {
@@ -515,7 +515,7 @@
   "warning": null,
   "error": null,
   "brecha": {
-    "now_pct": 18.08578141178927,
-    "day_avg_pct": 18.07020969835459
+    "now_pct": 18.096738284674025,
+    "day_avg_pct": 18.072621388019986
   }
 }
