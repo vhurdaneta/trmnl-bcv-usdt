@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T22:30:03-04:00",
+  "updated_at": "2026-11-26T22:35:02-04:00",
   "bcv": {
     "usd_ves": 924.3534,
     "eur_ves": 1011.7325269,
@@ -8,16 +8,16 @@
   "binance_prices": {
     "buy_now": {
       "count": 100,
-      "median": 1091.8705,
-      "average": 1091.49469,
+      "median": 1091.6975,
+      "average": 1091.46054,
       "min": 1089.5,
-      "max": 1092.5
+      "max": 1092.65
     },
     "sell_now": {
       "count": 100,
-      "median": 1085.3035,
-      "average": 1085.90388,
-      "min": 1084.89,
+      "median": 1085.6405,
+      "average": 1086.07331,
+      "min": 1085.0,
       "max": 1110.0
     },
     "day_avg": {
@@ -515,7 +515,7 @@
   "warning": null,
   "error": null,
   "brecha": {
-    "now_pct": 18.122624961405457,
+    "now_pct": 18.103909175862828,
     "day_avg_pct": 18.40762916850108
   }
 }
